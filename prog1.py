@@ -1,20 +1,10 @@
-namelist=[]
-n=input("Enter the number of names:")
-for i in range (1,n+1):
-	name=raw_input("Enter the name:")
-	namelist.append(name)
-oldname=raw_input("Enter the name to be removed:")
-newname=raw_input("Enter the new name:")
-for index,i in enumerate(namelist):
-	if i==oldname:
-		namelist[index]=newname
-	        print namelist
-l=input("Enter the index value to be deleted:")
-index=l
-del namelist[l]
-print namelist
-word=raw_input("Enter the name to be deleted:")
-for i,index in enumerate(namelist):
-	if (word==index):
-		del namelist[i]
-print namelist	
+a=[[2,3,4],[1,5,4],[7,3,4]]
+b=[[7,4,5],[2,4,2],[9,4,5]]
+result=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(a)):
+	for j in range(len(a[0])):
+		result[i][j]=a[i][j]+b[i][j]
+for i in range(0,len(a)):
+	print "\n"
+	for j in range(0,len(a[0])):
+		print result[i][j],	
