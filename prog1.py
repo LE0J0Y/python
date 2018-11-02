@@ -1,10 +1,15 @@
-a=[[2,3,4],[1,5,4],[7,3,4]]
-b=[[7,4,5],[2,4,2],[9,4,5]]
-result=[[0,0,0],[0,0,0],[0,0,0]]
-for i in range(len(a)):
-	for j in range(len(a[0])):
-		result[i][j]=a[i][j]+b[i][j]
-for i in range(0,len(a)):
-	print "\n"
-	for j in range(0,len(a[0])):
-		print result[i][j],	
+stock={}
+n=input("Enter the number of items:")
+for i in range(n):
+	a=raw_input("Enter the item name:")
+	stock[a]=input("Enter the number of items:")
+print stock
+h=raw_input("Enter the item to be removed:")
+del stock[h]
+print stock
+k=raw_input("Enter the item name to change the stock:")
+for j in stock:
+	if j==k:
+		u=input("Enter the new stock:")
+		stock[j]=u
+print stock
